@@ -7,7 +7,8 @@ import Sidebar from './general/Sidebar';
 import BacktoTopButton from './general/BacktoTopButton';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
-
+import 'swiper/swiper-bundle.min.css'
+import 'aos/dist/aos.css'
 
 function App() {
 

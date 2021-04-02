@@ -1,13 +1,11 @@
 import React from 'react'
-import MobileButton from '../general/MobileButton'
-import Sidebar from '../general/Sidebar'
-import DetailHeader from './DetailHeader'
 import DetailBody from './DetailBody'
+import BreadCrumb from './Breadcrumb'
 
 function Calculator(props) {
     return <div>
         <main id="main">
-            <DetailHeader />
+            <BreadCrumb />
             <DetailBody />
         </main>
     </div>
