@@ -3,6 +3,8 @@ import SwiperCore, { Navigation, Pagination } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+import 'swiper/swiper-bundle.min.css';
+
 SwiperCore.use([Navigation, Pagination]);
 
 function ImageSwiper() {
