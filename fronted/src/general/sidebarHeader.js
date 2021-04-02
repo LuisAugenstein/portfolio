@@ -1,5 +1,4 @@
 import React from 'react'
-import Sidebar from './Sidebar'
 
 function SidebarHeader(props) {
     return <div class="profile">
