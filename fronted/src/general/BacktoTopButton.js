@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'
 
 function BacktoTopButton(props) {
 
@@ -10,9 +11,9 @@ function BacktoTopButton(props) {
         }
     }, []);
 
-    return <btn onClick={() => window.scrollTo(0, 0)} class={"back-to-top d-flex align-items-center justify-content-center " + activeStr}>
+    return <Link to="/#hero" class={"back-to-top d-flex align-items-center justify-content-center " + activeStr}>
         <i class="bi bi-arrow-up-short"></i>
-    </btn>
+    </Link>
 }
 
 export default BacktoTopButton

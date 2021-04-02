@@ -6,6 +6,8 @@ import Calculator from './calculator/Calculator'
 import Sidebar from './general/Sidebar';
 import BacktoTopButton from './general/BacktoTopButton';
 
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 function App() {
 
