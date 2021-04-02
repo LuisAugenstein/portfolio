@@ -4,7 +4,7 @@ import ImageSwiper from './ImageSwiper'
 function DetailBody(props) {
     return <section id="portfolio-details" class="portfolio-details">
         <div class="container">
-            <div class="row gy-4">
+            <div class="row">
                 <div class="col-lg-8">
                     <ImageSwiper />
                 </div>
