@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { BsArrowUpShort } from 'react-icons/bs'
 
 function BacktoTopButton(props) {
 
@@ -12,7 +13,7 @@ function BacktoTopButton(props) {
     }, []);
 
     return <Link to="/#hero" class={"back-to-top d-flex align-items-center justify-content-center " + activeStr}>
-        <i class="bi bi-arrow-up-short"></i>
+        <BsArrowUpShort class="bs-arrow-up-short" />
     </Link>
 }
 

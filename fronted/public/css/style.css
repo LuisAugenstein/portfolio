@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.4s;
 }
 
-.back-to-top i {
+.bs-arrow-up-short {
   font-size: 28px;
   color: #fff;
   line-height: 0;

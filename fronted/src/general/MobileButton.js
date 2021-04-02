@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react'
+import { BsX, BsList } from 'react-icons/bs'
 
 function MobileButton({ isSidebarOpen, setSidebarOpen }) {
-    const getIcon = () => isSidebarOpen ? "bi-x" : "bi-list"
-    const getLeft = () => isSidebarOpen ? "0px" : "-300px"
 
     useEffect(() => {
         window.onresize = () => {
@@ -12,12 +11,13 @@ function MobileButton({ isSidebarOpen, setSidebarOpen }) {
             }
         }
         let header = document.getElementById('header')
-        header.style.left = getLeft()
+        header.style.left = isSidebarOpen ? "0px" : "-300px"
     }, [isSidebarOpen]);
 
 
-    return <i onClick={() => setSidebarOpen(!isSidebarOpen)}
-        class={"bi mobile-button d-xl-none " + getIcon()} />
+    return <btn onClick={() => setSidebarOpen(!isSidebarOpen)} class={"mobile-button d-xl-none "}>
+        {isSidebarOpen ? <BsX /> : <BsList />}
+    </btn>
 
 
 }
