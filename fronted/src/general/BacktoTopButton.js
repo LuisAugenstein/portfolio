@@ -12,9 +12,10 @@ function BacktoTopButton(props) {
         }
     }, []);
 
-    return <Link to="/#hero" class={"back-to-top d-flex align-items-center justify-content-center " + activeStr}>
+    return <btn onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        class={"back-to-top d-flex align-items-center justify-content-center " + activeStr}>
         <BsArrowUpShort class="bs-arrow-up-short" />
-    </Link>
+    </btn>
 }
 
 export default BacktoTopButton
