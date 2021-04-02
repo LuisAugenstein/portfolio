@@ -149,28 +149,27 @@ h1, h2, h3, h4, h5, h6 {
   white-space: nowrap;
 }
 
-.nav-menu a {
-  display: flex;
-  align-items: center;
+.nav-link {
   color: #a8a9b4;
   padding: 12px 15px;
   margin-bottom: 8px;
   transition: 0.3s;
-  font-size: 15px;
+  font-size: 16px;
 }
 
-.nav-menu a i {
-  font-size: 24px;
+.nav-icon {
+  font-size: 32px;
   padding-right: 8px;
+  padding-bottom: 5px;
   color: #6f7180;
 }
 
-.nav-menu a:hover, .nav-menu .active, .nav-menu li:hover > a {
+.nav-link:hover {
   text-decoration: none;
   color: #fff;
 }
 
-.nav-menu a:hover i, .nav-menu .active i, .nav-menu li:hover > a i {
+.nav-link:hover .nav-icon {
   color: #149ddd;
 }
 
@@ -196,14 +195,6 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
-.mobile-nav-active {
-  overflow: hidden;
-}
-
-.mobile-nav-active #header {
-  left: 0;
-}
-
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -214,43 +205,12 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
 }
 
-#hero:before {
-  content: "";
-  background: rgba(5, 13, 24, 0.3);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-}
-
-#hero .hero-container {
-  position: relative;
-  z-index: 2;
-  min-width: 300px;
-}
-
 #hero h1 {
   margin: 0 0 10px 0px;
   font-size: 64px;
   font-weight: 700;
   line-height: 56px;
   color: #fff;
-}
-
-#hero p {
-  color: #fff;
-  margin-bottom: 50px;
-  font-size: 26px;
-  font-family: "Poppins", sans-serif;
-}
-
-#hero p span {
-  color: #fff;
-  padding-bottom: 4px;
-  letter-spacing: 1px;
-  border-bottom: 3px solid #149ddd;
 }
 
 @media (min-width: 1024px) {
@@ -263,11 +223,6 @@ h1, h2, h3, h4, h5, h6 {
   #hero h1 {
     font-size: 28px;
     line-height: 36px;
-  }
-  #hero h2 {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 30px;
   }
 }
 

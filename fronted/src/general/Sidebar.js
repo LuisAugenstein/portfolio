@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory } from "react-router-dom"
 import { Link } from 'react-router-dom';
+import { BiHome, BiBookContent } from 'react-icons/bi'
 import MobileButton from './MobileButton';
 import SidebarHeader from './sidebarHeader'
 
@@ -10,8 +11,8 @@ function Sidebar(props) {
     let history = useHistory();
 
     const navItemData = [
-        { destination: "/#hero", icon: "bx-home", text: "Home" },
-        { destination: "/#portfolio", icon: "bx-book-content", text: "Portfolio" }
+        { destination: "/#hero", icon: <BiHome className="nav-icon" />, text: "Home" },
+        { destination: "/#portfolio", icon: <BiBookContent className="nav-icon" />, text: "Portfolio" }
     ]
 
     function linkClicked(destination) {
@@ -22,8 +23,8 @@ function Sidebar(props) {
 
     const navItems = navItemData.map(e => {
         return <li>
-            <Link to={e.destination} onClick={() => linkClicked()}>
-                <i class={"bx " + e.icon}></i>
+            <Link to={e.destination} onClick={() => linkClicked()} className="nav-link">
+                {e.icon}
                 <span>{e.text}</span>
             </Link>
         </li>
