@@ -23,11 +23,8 @@ function Home(props) {
     }, [location])
 
     return <div>
-        <MobileButton />
-        <Sidebar />
         <Heropage />
         <Portfolio />
-        <BacktoTopButton />
     </div>
 }
 
