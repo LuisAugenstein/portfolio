@@ -17,21 +17,19 @@ function Portfolio(props) {
 
     const projects = images.map(img => <SingleProject src={img.src} link={img.link} />)
 
-    return <main id="main">
-        <section id="portfolio" class="portfolio section-bg">
-            <div class="container">
+    return <section id="portfolio" class="portfolio section-bg">
+        <div class="container">
 
-                <div class="section-title">
-                    <h2>Portfolio</h2>
-                </div>
-
-                <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-                    {projects}
-                </div>
-
+            <div class="section-title">
+                <h2>Portfolio</h2>
             </div>
-        </section>
-    </main>
+
+            <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+                {projects}
+            </div>
+
+        </div>
+    </section>
 }
 
 export default Portfolio

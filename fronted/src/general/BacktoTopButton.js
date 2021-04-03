@@ -26,7 +26,7 @@ function BacktoTopButton(props) {
     return <Fab color="primary"
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         className={classes.fab}>
-        <BsArrowUpShort font-size="32px" />
+        <BsArrowUpShort fontSize="32px" />
     </Fab>
 }
 

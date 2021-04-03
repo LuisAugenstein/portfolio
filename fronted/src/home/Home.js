@@ -19,10 +19,10 @@ function Home(props) {
         }
     }, [location])
 
-    return <div>
+    return <main id="main">
         <Heropage />
         <Portfolio />
-    </div>
+    </main>
 }
 
 export default Home

@@ -7,7 +7,7 @@ function SingleProject(props) {
             <div class="portfolio-wrap">
                 <img src={props.src} class="img-fluid" alt="" />
                 <div class="portfolio-links">
-                    <a href="" title="More Details"><i class="bx bx-plus"></i></a>
+                    <a href="/" title="More Details"><i class="bx bx-plus"></i></a>
                 </div>
             </div>
         </Link>
