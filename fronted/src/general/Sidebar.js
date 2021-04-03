@@ -1,47 +1,51 @@
-import React, { useState } from 'react'
-import { useHistory } from "react-router-dom"
-import { Link } from 'react-router-dom';
-import { BiHome, BiBookContent } from 'react-icons/bi'
-import MobileButton from './MobileButton';
-import SidebarHeader from './sidebarHeader'
+import React, { useEffect, useState } from 'react'
+import { Drawer, Hidden } from '@material-ui/core';
+import { makeStyles, useTheme } from '@material-ui/styles'
+import { BsX, BsList } from 'react-icons/bs'
+import Fab from '@material-ui/core/Fab'
+import SidebarContent from './SidebarContent';
 
+const useStyles = makeStyles(theme => ({
+    paper: {
+        width: "300px",
+        padding: "0 15px",
+        backgroundColor: theme.palette.grey[900]
+    },
+    fab: {
+        position: "fixed",
+        top: theme.spacing(2),
+        right: theme.spacing(2),
+    }
+}))
 
 function Sidebar(props) {
     const [isSidebarOpen, setSidebarOpen] = useState(true);
-    let history = useHistory();
+    const classes = useStyles();
+    const theme = useTheme();
 
-    const navItemData = [
-        { destination: "/#hero", icon: <BiHome className="nav-icon" />, text: "Home" },
-        { destination: "/#portfolio", icon: <BiBookContent className="nav-icon" />, text: "Portfolio" }
-    ]
-
-    function linkClicked(destination) {
-        if (document.body.clientWidth < 1200) {
-            setSidebarOpen(false)
+    useEffect(() => {
+        window.onresize = () => {
+            if ((document.body.clientWidth < theme.breakpoints.values.lg && isSidebarOpen)
+                || (document.body.clientWidth > theme.breakpoints.values.lg && !isSidebarOpen)) {
+                setSidebarOpen(!isSidebarOpen)
+            }
         }
-    }
-
-    const navItems = navItemData.map(e => {
-        return <li>
-            <Link to={e.destination} onClick={() => linkClicked()} className="nav-link">
-                {e.icon}
-                <span>{e.text}</span>
-            </Link>
-        </li>
     });
 
-
-    return <header id="header">
-        <div class="d-flex flex-column">
-            <MobileButton isSidebarOpen={isSidebarOpen} setSidebarOpen={setSidebarOpen} />
-            <SidebarHeader />
-            <nav id="navbar" class="nav-menu navbar">
-                <ul>
-                    {navItems}
-                </ul>
-            </nav>
-        </div>
-    </header>
+    return <div>
+        <Hidden lgUp>
+            <Fab color="primary"
+                onClick={() => setSidebarOpen(!isSidebarOpen)}
+                className={classes.fab}>
+                {isSidebarOpen ? <BsX font-size="25px" /> : <BsList font-size="25px" />}
+            </Fab>
+        </Hidden>
+        <Drawer open={isSidebarOpen}
+            variant="persistent"
+            classes={{ paper: classes.paper }}>
+            <SidebarContent setSidebarOpen={setSidebarOpen} />
+        </Drawer>
+    </div>
 }
 
 export default Sidebar

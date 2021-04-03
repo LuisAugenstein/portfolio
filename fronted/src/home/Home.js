@@ -1,8 +1,5 @@
 import React, { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
-import MobileButton from '../general/MobileButton'
-import Sidebar from '../general/Sidebar'
-import BacktoTopButton from '../general/BacktoTopButton'
 import Heropage from './Heropage'
 import Portfolio from './Portfolio'
 

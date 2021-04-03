@@ -15,7 +15,7 @@ function DetailBody(props) {
                         <ul>
                             <li><strong>Project Goal</strong>: Implement a parser to evaluate basic string expressions create by a basic calculator.</li>
                             <li><strong>Used Tools</strong>: C++ backend, React frontend</li>
-                            <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+                            <li><strong>Project URL</strong>: <a href="/#">www.example.com</a></li>
                         </ul>
                     </div>
                     <div class="portfolio-description">
