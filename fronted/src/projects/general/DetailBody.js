@@ -1,7 +1,7 @@
 import { Grid, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
 import React from 'react'
-import Section from '../general/Section'
+import Section from '../../Section'
 import ImageSwiper from './ImageSwiper'
 import ProjectCard from './ProjectCard'
 

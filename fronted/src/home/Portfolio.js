@@ -1,7 +1,7 @@
 import { makeStyles, Typography, Grid, useMediaQuery } from '@material-ui/core'
 import React from 'react'
 import SingleProject from './SingleProject';
-import Section from '../general/Section'
+import Section from '../Section'
 
 const useStyles = makeStyles(theme => ({
     title: {

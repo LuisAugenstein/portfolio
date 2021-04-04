@@ -3,8 +3,6 @@ import { useLocation } from 'react-router-dom'
 import Heropage from './Heropage'
 import Portfolio from './Portfolio'
 
-
-
 function Home(props) {
     const location = useLocation()
 

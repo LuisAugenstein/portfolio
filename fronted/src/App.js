@@ -2,9 +2,9 @@ import React, { useEffect } from 'react'
 import { Route, Switch } from 'react-router-dom';
 import AOS from 'aos'
 import Home from './home/Home'
-import Calculator from './calculator/Calculator'
-import Sidebar from './general/Sidebar';
-import BacktoTopButton from './general/BacktoTopButton';
+import Calculator from './projects/Calculator'
+import Sidebar from './Sidebar';
+import BacktoTopButton from './BacktoTopButton';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'swiper/swiper-bundle.min.css'

@@ -1,6 +1,6 @@
 import React from 'react'
-import DetailBody from './DetailBody'
-import BreadCrumb from './Breadcrumb'
+import DetailBody from './general/DetailBody'
+import BreadCrumb from './general/Breadcrumb'
 
 function Calculator(props) {
     return <main id="main">
