@@ -1,18 +1,29 @@
-import React from 'react'
+import { Box, Container, Grid, Typography, Breadcrumbs, useMediaQuery } from '@material-ui/core'
+import { makeStyles } from '@material-ui/styles'
 import { Link } from 'react-router-dom'
 
+const useStyles = makeStyles(theme => ({
+    box: {
+        background: theme.palette.grey[100]
+    }
+}))
+
 function BreadCrumb(props) {
-    return <section id="breadcrumbs" class="breadcrumbs">
-        <div class="container">
-            <div class="d-flex justify-content-between align-items-center">
-                <h2>Caclulator Project</h2>
-                <ol>
-                    <li><Link to="/#hero">Home</Link></li>
-                    <li>Calculator</li>
-                </ol>
-            </div>
-        </div>
-    </section>
+    const classes = useStyles()
+    const isSmallScreen = useMediaQuery(theme => theme.breakpoints.down("sm"));
+    return <Box py={3} px={isSmallScreen ? 1 : 6} className={classes.box}>
+        <Container maxWidth="xl">
+            <Grid container justify="space-between" alignItems="center">
+                <Grid item lg="3" xs="12">
+                    <Typography variant="h5">Caclulator Project</Typography>
+                </Grid>
+                <Breadcrumbs>
+                    <Link to="/#hero">Home</Link>
+                    <Typography>Calculator</Typography>
+                </Breadcrumbs>
+            </Grid>
+        </Container>
+    </Box>
 }
 
 export default BreadCrumb

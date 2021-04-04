@@ -1,11 +1,9 @@
-import { Box, Container, makeStyles, Typography, Grid } from '@material-ui/core'
+import { makeStyles, Typography, Grid, useMediaQuery } from '@material-ui/core'
 import React from 'react'
 import SingleProject from './SingleProject';
+import Section from '../general/Section'
 
 const useStyles = makeStyles(theme => ({
-    container: {
-        padding: "0 50px"
-    },
     title: {
         padding: "50px 0",
         "&::after": {
@@ -21,6 +19,8 @@ const useStyles = makeStyles(theme => ({
 
 function Portfolio(props) {
     const classes = useStyles()
+    const isSmallScreen = useMediaQuery(theme => theme.breakpoints.down("sm"));
+
 
     const images = [
         { src: "img/portfolio/portfolio-1.png", link: "/calculator" },
@@ -34,16 +34,14 @@ function Portfolio(props) {
         { src: "img/portfolio/portfolio-9.jpg", link: "/" },
     ]
 
-    return <Box id="portfolio">
-        <Container className={classes.container} maxWidth="xl">
-            <Typography variant="h3" className={classes.title}>
-                Portfolio
-            </Typography>
-            <Grid container spacing="4" data-aos="fade-up" data-aos-delay="100">
-                {images.map(img => <SingleProject src={img.src} link={img.link} />)}
-            </Grid>
-        </Container>
-    </Box>
+    return <Section id="portfolio">
+        <Typography variant={isSmallScreen ? "h4" : "h3"} className={classes.title}>
+            Portfolio
+        </Typography>
+        <Grid container spacing="4" data-aos="fade-up" data-aos-delay="100">
+            {images.map(img => <SingleProject src={img.src} link={img.link} />)}
+        </Grid>
+    </Section>
 }
 
 export default Portfolio

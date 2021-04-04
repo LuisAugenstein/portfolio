@@ -7,51 +7,9 @@
   }
 }
 
-
-/*--------------------------------------------------------------
-# Breadcrumbs
---------------------------------------------------------------*/
-#breadcrumbs {
-  padding: 20px 0;
-  background: #f9f9f9;
-}
-
-#breadcrumbs h2 {
-  font-size: 26px;
-  font-weight: 300;
-}
-
-#breadcrumbs ol {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 15px;
-}
-
-#breadcrumbs ol li + li {
-  padding-left: 10px;
-}
-
-#breadcrumbs ol li + li::before {
-  padding-right: 10px;
-  color: #0e2442;
-  content: "/";
-}
-
-@media (max-width: 768px) {
-  #breadcrumbs .d-flex {
-    display: block !important;
-  }
-}
-
-
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
-#portfolio-details {
-  padding-top: 40px;
-}
 
 #portfolio-details .portfolio-details-slider img {
   width: 100%;
