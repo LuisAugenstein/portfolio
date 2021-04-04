@@ -1,5 +1,13 @@
+import { Box, Container, makeStyles } from '@material-ui/core'
 import React from 'react'
 import SingleProject from './SingleProject'
+
+const useStyles = makeStyles(theme => ({
+    box: {
+        paddingTop: "60px",
+        backgroundColor: theme.palette.background.default
+    }
+}))
 
 function Portfolio(props) {
 
@@ -16,10 +24,9 @@ function Portfolio(props) {
     ]
 
     const projects = images.map(img => <SingleProject src={img.src} link={img.link} />)
-
-    return <section id="portfolio" class="portfolio section-bg">
-        <div class="container">
-
+    const classes = useStyles()
+    return <Box id="portfolio" className={classes.box}>
+        <Container>
             <div class="section-title">
                 <h2>Portfolio</h2>
             </div>
@@ -28,8 +35,8 @@ function Portfolio(props) {
                 {projects}
             </div>
 
-        </div>
-    </section>
+        </Container>
+    </Box>
 }
 
 export default Portfolio
