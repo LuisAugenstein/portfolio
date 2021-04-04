@@ -39,7 +39,7 @@ function Portfolio(props) {
             Portfolio
         </Typography>
         <Grid container spacing={4} data-aos="fade-up" data-aos-delay="100">
-            {images.map(img => <SingleProject src={img.src} link={img.link} />)}
+            {images.map((img, idx) => <SingleProject src={img.src} link={img.link} key={idx} />)}
         </Grid>
     </Section>
 }

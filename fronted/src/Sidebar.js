@@ -38,7 +38,7 @@ function Sidebar(props) {
             <Fab color="primary"
                 onClick={() => setSidebarOpen(!isSidebarOpen)}
                 className={classes.fab}>
-                {isSidebarOpen ? <BsX font-size="25px" /> : <BsList font-size="25px" />}
+                {isSidebarOpen ? <BsX fontSize="25px" /> : <BsList fontSize="25px" />}
             </Fab>
         </Hidden>
         <Drawer open={isSidebarOpen}
