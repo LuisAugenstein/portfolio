@@ -1,13 +1,19 @@
-/*--------------------------------------------------------------
-# Margin left for main content for sidebar
---------------------------------------------------------------*/
+*{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+html, body, main, #root {
+  height: 100%;
+}
+
 @media (min-width: 1280px) {
   #main {
     margin-left: 300px;
   }
 }
 
-html, body, main, #root {
-  height: 100%;
-}
 

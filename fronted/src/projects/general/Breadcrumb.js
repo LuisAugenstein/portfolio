@@ -1,14 +1,15 @@
-import { Box, Container, Grid, Typography, Breadcrumbs, useMediaQuery } from '@material-ui/core'
+import { Box, Container, Grid, Typography, Breadcrumbs, useMediaQuery, Link as MuiLink } from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
-import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 const useStyles = makeStyles(theme => ({
     box: {
         background: theme.palette.grey[100]
-    }
+    },
 }))
 
 function BreadCrumb(props) {
+    const history = useHistory()
     const classes = useStyles()
     const isSmallScreen = useMediaQuery(theme => theme.breakpoints.down("sm"));
     return <Box py={3} px={isSmallScreen ? 1 : 6} className={classes.box}>
@@ -18,7 +19,9 @@ function BreadCrumb(props) {
                     <Typography variant="h5">Caclulator Project</Typography>
                 </Grid>
                 <Breadcrumbs>
-                    <Link to="/#hero">Home</Link>
+                    <MuiLink onClick={() => history.push("/#hero")} style={{ cursor: "pointer" }}>
+                        Home
+                    </MuiLink>
                     <Typography>Calculator</Typography>
                 </Breadcrumbs>
             </Grid>

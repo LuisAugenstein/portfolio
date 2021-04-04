@@ -6,7 +6,6 @@ import Calculator from './projects/Calculator'
 import Sidebar from './Sidebar';
 import BacktoTopButton from './BacktoTopButton';
 
-import 'bootstrap/dist/css/bootstrap.min.css'
 import 'swiper/swiper-bundle.min.css'
 import 'aos/dist/aos.css'
 

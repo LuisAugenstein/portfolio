@@ -1,7 +1,7 @@
 import React from 'react'
 import { useHistory } from "react-router-dom"
 import { BiHome, BiBookContent } from 'react-icons/bi'
-import { ListItemText, List, ListItem, ListItemIcon, ListItemAvatar, Avatar } from '@material-ui/core';
+import { List, ListItem, ListItemIcon, ListItemAvatar, Avatar, Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles'
 
 const useStyles = makeStyles(theme => ({
@@ -9,10 +9,6 @@ const useStyles = makeStyles(theme => ({
         width: "120px",
         height: "120px",
         border: "8px solid #2c2f3f",
-    },
-    text: {
-        fontSize: "30px",
-        textAlign: "center"
     },
     btn: {
         cursor: "pointer",
@@ -49,19 +45,25 @@ function SidebarContent({ setSidebarOpen }) {
             <ListItemIcon>
                 {e.icon}
             </ListItemIcon>
-            <ListItemText primary={e.text} />
+            <Typography style={{ color: "white", fontSize: "17px" }}>
+                {e.text}
+            </Typography>
         </ListItem>
     });
 
     return (
         <List className="text-white" >
-            <ListItem className="justify-content-center">
-                <ListItemAvatar >
-                    <Avatar src="img/profile-img.jpg" className={classes.img} />
-                </ListItemAvatar>
+            <ListItem >
+                <Grid container justify="center">
+                    <ListItemAvatar >
+                        <Avatar src="img/profile-img.jpg" className={classes.img} />
+                    </ListItemAvatar>
+                </Grid>
             </ListItem>
-            <ListItem>
-                <ListItemText primary="Luis Augenstein" classes={{ primary: classes.text }} />
+            <ListItem style={{ justifyContent: "center" }}>
+                <Typography variant="h5" style={{ color: "white" }}>
+                    Luis Augenstein
+                </Typography>
             </ListItem>
             {navItems}
         </List>

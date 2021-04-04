@@ -1,4 +1,4 @@
-import { Button, Box, Card, CardActions, CardContent, Divider, Typography, makeStyles, ListItem, Grid } from '@material-ui/core'
+import { Button, Box, Card, CardActions, CardContent, Divider, Typography, makeStyles, ListItem, Grid, Link as MuiLink } from '@material-ui/core'
 import React from 'react'
 
 const useStyles = makeStyles(theme => ({
@@ -40,7 +40,7 @@ function ProjectCard(props) {
         </ListItem>
         <ListItem>
             <Typography>
-                <strong>Project URL</strong>: <a href="/#">www.example.com</a>
+                <strong>Project URL</strong>: <MuiLink style={{ cursor: "pointer" }}>www.example.com</MuiLink>
             </Typography>
         </ListItem>
 
