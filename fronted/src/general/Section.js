@@ -4,7 +4,8 @@ import { makeStyles } from '@material-ui/styles';
 
 const useStyles = makeStyles(theme => ({
     box: {
-        backgroundColor: theme.palette.background.default
+        backgroundColor: theme.palette.background.default,
+        height: 'calc(100% - 80px)'
     }
 }))
 

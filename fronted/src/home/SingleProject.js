@@ -36,14 +36,14 @@ const useStyles = makeStyles(theme => ({
 
 function SingleProject({ src, link }) {
     const classes = useStyles()
-    return <Grid item md="4" sm="6" xs="12">
+    return <Grid item md={4} sm={6} xs={12}>
         <Link to={link}>
             <Card id="card" className={classes.card}>
                 <CardActionArea classes={{
                     root: classes.actionarea,
                     focusHighlight: classes.focusHighlight
                 }}>
-                    <img class={classes.media} src={src} alt="" />
+                    <img className={classes.media} src={src} alt="" />
                 </CardActionArea>
                 <Grid container id="bluebox" className={"portfolio-links " + classes.bluebox} justify="center" alignItems="center">
                     <MdAdd />

@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 function Sidebar(props) {
-    const [isSidebarOpen, setSidebarOpen] = useState(true);
+    const [isSidebarOpen, setSidebarOpen] = useState(window.innerWidth > 1280);
     const classes = useStyles();
     const theme = useTheme();
 

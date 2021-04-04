@@ -38,7 +38,7 @@ function Portfolio(props) {
         <Typography variant={isSmallScreen ? "h4" : "h3"} className={classes.title}>
             Portfolio
         </Typography>
-        <Grid container spacing="4" data-aos="fade-up" data-aos-delay="100">
+        <Grid container spacing={4} data-aos="fade-up" data-aos-delay="100">
             {images.map(img => <SingleProject src={img.src} link={img.link} />)}
         </Grid>
     </Section>

@@ -14,7 +14,7 @@ function BreadCrumb(props) {
     return <Box py={3} px={isSmallScreen ? 1 : 6} className={classes.box}>
         <Container maxWidth="xl">
             <Grid container justify="space-between" alignItems="center">
-                <Grid item lg="3" xs="12">
+                <Grid item lg={3} xs={12}>
                     <Typography variant="h5">Caclulator Project</Typography>
                 </Grid>
                 <Breadcrumbs>
