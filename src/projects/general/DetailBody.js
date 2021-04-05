@@ -12,8 +12,7 @@ const useStyles = makeStyles(theme => ({
         marginTop: "25px"
     },
     markdown: {
-        fontFamily: "Helvetica",
-        fontWeight: "200"
+        fontFamily: theme.typography.fontFamily
     }
 }))
 

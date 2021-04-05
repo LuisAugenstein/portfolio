@@ -22,6 +22,7 @@ const useStyles = makeStyles(theme => ({
             display: "block",
             width: "50px",
             height: "3px",
+            marginTop: "15px",
             background: theme.palette.primary.main
         }
     },

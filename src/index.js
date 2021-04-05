@@ -9,6 +9,9 @@ import './style.css';
 const theme = createMuiTheme({
   palette: {
     primary: blue,
+  },
+  typography: {
+    fontFamily: "'Open Sans', sans-serif"
   }
 })
 

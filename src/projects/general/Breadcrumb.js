@@ -16,7 +16,7 @@ function BreadCrumb(props) {
         <Container maxWidth="xl">
             <Grid container justify="space-between" alignItems="center">
                 <Grid item lg={3} xs={12}>
-                    <Typography variant="h5">Caclulator Project</Typography>
+                    <Typography variant="h5">Calculator Project</Typography>
                 </Grid>
                 <Breadcrumbs>
                     <MuiLink onClick={() => history.push("/#hero")} style={{ cursor: "pointer" }}>
