@@ -7,14 +7,17 @@ import { fade } from '@material-ui/core/styles/colorManipulator';
 const useStyles = makeStyles(theme => ({
     media: {
         width: "100%",
+        height: "100%"
     },
     card: {
         position: "relative",
+        height: "100%",
         "&:hover #bluebox": {
             bottom: "0"
         }
     },
     actionarea: {
+        height: "100%",
         "&:hover $focusHighlight": {
             opacity: "1"
         }
