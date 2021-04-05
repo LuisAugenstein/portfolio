@@ -1,4 +1,4 @@
-import { Grid, Typography } from '@material-ui/core'
+import { Grid } from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
 import ReactMarkdown from 'react-markdown'
 import React from 'react'
@@ -12,7 +12,8 @@ const useStyles = makeStyles(theme => ({
         marginTop: "25px"
     },
     markdown: {
-        fontFamily: "Helvetica"
+        fontFamily: "Helvetica",
+        fontWeight: "200"
     }
 }))
 
