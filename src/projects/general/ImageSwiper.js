@@ -9,8 +9,8 @@ import Image3 from "../../img/portfolio/portfolio-details-3.jpg"
 
 const useStyles = makeStyles(theme => ({
     swiper: {
-        '& img': {
-            width: "100%"
+        '& img, .swiper-slide-active': {
+            width: "100% !important"
         },
         '& .swiper-pagination': {
             marginTop: "20px",
