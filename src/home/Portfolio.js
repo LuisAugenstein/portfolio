@@ -33,15 +33,15 @@ function Portfolio(props) {
 
 
     const images = [
-        { file: Image1, link: "/Portfolio/calculator" },
-        { file: Image2, link: "/Portfolio" },
-        { file: Image3, link: "/Portfolio" },
-        { file: Image4, link: "/Portfolio" },
-        { file: Image5, link: "/Portfolio" },
-        { file: Image6, link: "/Portfolio" },
-        { file: Image7, link: "/Portfolio" },
-        { file: Image8, link: "/Portfolio" },
-        { file: Image9, link: "/Portfolio" },
+        { file: Image1, link: "/calculator" },
+        { file: Image2, link: "/" },
+        { file: Image3, link: "/" },
+        { file: Image4, link: "/" },
+        { file: Image5, link: "/" },
+        { file: Image6, link: "/" },
+        { file: Image7, link: "/" },
+        { file: Image8, link: "/" },
+        { file: Image9, link: "/" },
     ]
 
     return <Section id="portfolio">

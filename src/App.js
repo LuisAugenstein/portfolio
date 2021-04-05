@@ -26,8 +26,8 @@ function App() {
   return (<main>
     <Sidebar />
     <Switch>
-      <Route path="/Portfolio" component={Home} exact />
-      <Route path="/Portfolio/calculator" component={Calculator} />
+      <Route path="/" component={Home} exact />
+      <Route path="/calculator" component={Calculator} />
     </Switch>
     <BacktoTopButton />
   </main>
