@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
 
 function DetailBody(props) {
     const classes = useStyles()
-    return <Section id="portfolio-details">
+    return <Section>
         <Grid container spacing={3}>
             <Grid item md={8} xs={12}>
                 <ImageSwiper />
@@ -33,7 +33,6 @@ function DetailBody(props) {
                     {markdownText}
                 </ReactMarkdown>
             </Grid>
-
         </Grid>
     </Section>
 

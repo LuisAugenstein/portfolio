@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { BsArrowUpShort } from 'react-icons/bs'
 import Fab from '@material-ui/core/Fab'
 import makeStyles from '@material-ui/core/styles/makeStyles'
+import { useMediaQuery } from '@material-ui/core';
 
-function BacktoTopButton({ isSidebarOpen }) {
+function BacktoTopButton({ isSidebarOpen, setSidebarOpen }) {
     const [visibilityStr, setVisibilityStr] = useState("hidden");
+    const isSmallScreen = useMediaQuery(theme => theme.breakpoints.down("md"));
 
     useEffect(() => {
         window.onscroll = () => {
@@ -12,7 +14,7 @@ function BacktoTopButton({ isSidebarOpen }) {
         }
     }, []);
 
-    const fabStyle = makeStyles(theme => ({
+    const useStyles = makeStyles(theme => ({
         fab: {
             position: 'fixed',
             bottom: theme.spacing(2),
@@ -21,11 +23,17 @@ function BacktoTopButton({ isSidebarOpen }) {
             zIndex: "1"
         }
     }))
-    const classes = fabStyle()
 
+    function action() {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+        if (isSmallScreen) {
+            setSidebarOpen(false)
+        }
+    }
 
+    const classes = useStyles()
     return <Fab color="primary"
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        onClick={action}
         className={classes.fab}>
         <BsArrowUpShort fontSize="32px" />
     </Fab>

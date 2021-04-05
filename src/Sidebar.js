@@ -47,7 +47,7 @@ function Sidebar(props) {
             classes={{ paper: classes.paper }}>
             <SidebarContent setSidebarOpen={setSidebarOpen} />
         </Drawer>
-        <BacktoTopButton isSidebarOpen={isSidebarOpen} />
+        <BacktoTopButton isSidebarOpen={isSidebarOpen} setSidebarOpen={setSidebarOpen} />
     </div>
 }
 

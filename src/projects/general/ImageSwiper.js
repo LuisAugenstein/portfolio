@@ -13,6 +13,9 @@ const useStyles = makeStyles(theme => ({
         '& img': {
             width: "100%"
         },
+        '& .swiper-slide': {
+            width: "100% !important"
+        },
         '& .swiper-pagination': {
             marginTop: "20px",
             position: "relative",
@@ -36,7 +39,7 @@ function ImageSwiper() {
     const classes = useStyles()
     return (
         <Swiper
-            className={"portfolio-details-slider " + classes.swiper}
+            className={classes.swiper}
             spaceBetween={50}
             navigation
             pagination={{ clickable: true }}
