@@ -4,6 +4,8 @@ import { BiHome, BiBookContent } from 'react-icons/bi'
 import { List, ListItem, ListItemIcon, ListItemAvatar, Avatar, Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles'
 
+import avatarImg from './img/profile-img.jpg'
+
 const useStyles = makeStyles(theme => ({
     img: {
         width: "120px",
@@ -56,7 +58,7 @@ function SidebarContent({ setSidebarOpen }) {
             <ListItem >
                 <Grid container justify="center">
                     <ListItemAvatar >
-                        <Avatar src="img/profile-img.jpg" className={classes.img} />
+                        <Avatar alt="avatar" src={avatarImg} className={classes.img} />
                     </ListItemAvatar>
                 </Grid>
             </ListItem>

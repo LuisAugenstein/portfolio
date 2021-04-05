@@ -4,6 +4,10 @@ import SwiperCore, { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.min.css';
 
+import Image1 from "../../img/portfolio/portfolio-details-1.jpg"
+import Image2 from "../../img/portfolio/portfolio-details-2.jpg"
+import Image3 from "../../img/portfolio/portfolio-details-3.jpg"
+
 const useStyles = makeStyles(theme => ({
     swiper: {
         '& img': {
@@ -37,10 +41,9 @@ function ImageSwiper() {
             navigation
             pagination={{ clickable: true }}
         >
-            <SwiperSlide><img src="img/portfolio/portfolio-details-1.jpg" alt="" /></SwiperSlide>
-            <SwiperSlide><img src="img/portfolio/portfolio-details-2.jpg" alt="" /></SwiperSlide>
-            <SwiperSlide><img src="img/portfolio/portfolio-details-3.jpg" alt="" /></SwiperSlide>
-            <SwiperSlide><img src="img/portfolio/portfolio-details-1.jpg" alt="" /></SwiperSlide>
+            <SwiperSlide><img src={Image1} alt="" /></SwiperSlide>
+            <SwiperSlide><img src={Image2} alt="" /></SwiperSlide>
+            <SwiperSlide><img src={Image3} alt="" /></SwiperSlide>
         </Swiper>
     );
 }

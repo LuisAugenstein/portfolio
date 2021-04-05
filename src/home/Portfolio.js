@@ -3,6 +3,16 @@ import React from 'react'
 import SingleProject from './SingleProject';
 import Section from '../Section'
 
+import Image1 from "../img/portfolio/portfolio-1.png"
+import Image2 from "../img/portfolio/portfolio-2.jpg"
+import Image3 from "../img/portfolio/portfolio-3.jpg"
+import Image4 from "../img/portfolio/portfolio-4.jpg"
+import Image5 from "../img/portfolio/portfolio-5.jpg"
+import Image6 from "../img/portfolio/portfolio-6.jpg"
+import Image7 from "../img/portfolio/portfolio-7.jpg"
+import Image8 from "../img/portfolio/portfolio-8.jpg"
+import Image9 from "../img/portfolio/portfolio-9.jpg"
+
 const useStyles = makeStyles(theme => ({
     title: {
         padding: "50px 0",
@@ -23,15 +33,15 @@ function Portfolio(props) {
 
 
     const images = [
-        { src: "img/portfolio/portfolio-1.png", link: "/calculator" },
-        { src: "img/portfolio/portfolio-2.jpg", link: "/" },
-        { src: "img/portfolio/portfolio-3.jpg", link: "/" },
-        { src: "img/portfolio/portfolio-4.jpg", link: "/" },
-        { src: "img/portfolio/portfolio-5.jpg", link: "/" },
-        { src: "img/portfolio/portfolio-6.jpg", link: "/" },
-        { src: "img/portfolio/portfolio-7.jpg", link: "/" },
-        { src: "img/portfolio/portfolio-8.jpg", link: "/" },
-        { src: "img/portfolio/portfolio-9.jpg", link: "/" },
+        { file: Image1, link: "/calculator" },
+        { file: Image2, link: "/" },
+        { file: Image3, link: "/" },
+        { file: Image4, link: "/" },
+        { file: Image5, link: "/" },
+        { file: Image6, link: "/" },
+        { file: Image7, link: "/" },
+        { file: Image8, link: "/" },
+        { file: Image9, link: "/" },
     ]
 
     return <Section id="portfolio">
@@ -39,7 +49,7 @@ function Portfolio(props) {
             Portfolio
         </Typography>
         <Grid container spacing={4} data-aos="fade-up" data-aos-delay="100">
-            {images.map((img, idx) => <SingleProject src={img.src} link={img.link} key={idx} />)}
+            {images.map((img, idx) => <SingleProject imgFile={img.file} link={img.link} key={idx} />)}
         </Grid>
     </Section>
 }
