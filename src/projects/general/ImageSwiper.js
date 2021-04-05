@@ -2,7 +2,6 @@ import { makeStyles } from '@material-ui/styles';
 import React from 'react'
 import SwiperCore, { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.min.css';
 
 import Image1 from "../../img/portfolio/portfolio-details-1.jpg"
 import Image2 from "../../img/portfolio/portfolio-details-2.jpg"
@@ -12,9 +11,6 @@ const useStyles = makeStyles(theme => ({
     swiper: {
         '& img': {
             width: "100%"
-        },
-        '& .swiper-slide': {
-            width: "100% !important"
         },
         '& .swiper-pagination': {
             marginTop: "20px",

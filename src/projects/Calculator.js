@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import DetailBody from './general/DetailBody'
 import BreadCrumb from './general/Breadcrumb'
-import { useLocation } from 'react-router'
+import { useLocation } from 'react-router-dom'
 
 function Calculator(props) {
     const location = useLocation()
