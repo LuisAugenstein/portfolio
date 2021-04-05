@@ -1,13 +1,18 @@
 import { Grid, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
+import ReactMarkdown from 'react-markdown'
 import React from 'react'
 import Section from '../../Section'
 import ImageSwiper from './ImageSwiper'
 import ProjectCard from './ProjectCard'
+import markdownText from './calculatorMarkdown'
 
 const useStyles = makeStyles(theme => ({
     paper: {
         marginTop: "25px"
+    },
+    markdown: {
+        fontFamily: "Helvetica"
     }
 }))
 
@@ -24,16 +29,9 @@ function DetailBody(props) {
             </Grid>
 
             <Grid item xs={12} className={classes.paper}>
-
-                <Typography variant="h4" gutterBottom >
-                    Calculator - Backend Parser
-                    </Typography>
-                <Typography paragraph>
-                    Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi l
-                    andae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium
-                    nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
-                </Typography>
-
+                <ReactMarkdown className={classes.markdown}>
+                    {markdownText}
+                </ReactMarkdown>
             </Grid>
 
         </Grid>
