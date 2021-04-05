@@ -4,7 +4,6 @@ import AOS from 'aos'
 import Home from './home/Home'
 import Calculator from './projects/Calculator'
 import Sidebar from './Sidebar';
-import BacktoTopButton from './BacktoTopButton';
 
 import 'swiper/swiper-bundle.min.css'
 import 'aos/dist/aos.css'
@@ -29,7 +28,6 @@ function App() {
       <Route path="/" component={Home} exact />
       <Route path="/calculator" component={Calculator} />
     </Switch>
-    <BacktoTopButton />
   </main>
   );
 }

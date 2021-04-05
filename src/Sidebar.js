@@ -4,6 +4,7 @@ import { makeStyles, useTheme } from '@material-ui/styles'
 import { BsX, BsList } from 'react-icons/bs'
 import Fab from '@material-ui/core/Fab'
 import SidebarContent from './SidebarContent';
+import BacktoTopButton from './BacktoTopButton';
 
 const useStyles = makeStyles(theme => ({
     paper: {
@@ -46,6 +47,7 @@ function Sidebar(props) {
             classes={{ paper: classes.paper }}>
             <SidebarContent setSidebarOpen={setSidebarOpen} />
         </Drawer>
+        <BacktoTopButton isSidebarOpen={isSidebarOpen} />
     </div>
 }
 

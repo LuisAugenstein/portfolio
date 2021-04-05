@@ -3,12 +3,12 @@ import { BsArrowUpShort } from 'react-icons/bs'
 import Fab from '@material-ui/core/Fab'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 
-function BacktoTopButton(props) {
+function BacktoTopButton({ isSidebarOpen }) {
     const [visibilityStr, setVisibilityStr] = useState("hidden");
 
     useEffect(() => {
         window.onscroll = () => {
-            setVisibilityStr(window.scrollY > 100 ? "visible" : "hidden");
+            setVisibilityStr((window.scrollY > 100) ? "visible" : "hidden");
         }
     }, []);
 
@@ -17,7 +17,8 @@ function BacktoTopButton(props) {
             position: 'fixed',
             bottom: theme.spacing(2),
             right: theme.spacing(2),
-            visibility: visibilityStr,
+            visibility: isSidebarOpen ? visibilityStr : "hidden",
+            zIndex: "1"
         }
     }))
     const classes = fabStyle()
