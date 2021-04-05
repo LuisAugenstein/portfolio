@@ -31,8 +31,8 @@ function SidebarContent({ setSidebarOpen }) {
     const classes = useStyles();
 
     const navItemData = [
-        { destination: "/#hero", icon: <BiHome className="icon" />, text: "Home" },
-        { destination: "/#portfolio", icon: <BiBookContent className="icon" />, text: "Portfolio" }
+        { destination: "/Portfolio/#hero", icon: <BiHome className="icon" />, text: "Home" },
+        { destination: "/Portfolio/#portfolio", icon: <BiBookContent className="icon" />, text: "Portfolio" }
     ]
 
     function linkClicked(destination) {

@@ -19,7 +19,7 @@ function BreadCrumb(props) {
                     <Typography variant="h5">Caclulator Project</Typography>
                 </Grid>
                 <Breadcrumbs>
-                    <MuiLink onClick={() => history.push("/#hero")} style={{ cursor: "pointer" }}>
+                    <MuiLink onClick={() => history.push("/Portfolio/#hero")} style={{ cursor: "pointer" }}>
                         Home
                     </MuiLink>
                     <Typography>Calculator</Typography>
