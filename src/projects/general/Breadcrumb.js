@@ -8,7 +8,7 @@ const useStyles = makeStyles(theme => ({
     },
 }))
 
-function BreadCrumb(props) {
+function BreadCrumb({ title }) {
     const history = useHistory()
     const classes = useStyles()
     const isSmallScreen = useMediaQuery(theme => theme.breakpoints.down("sm"));
@@ -16,13 +16,13 @@ function BreadCrumb(props) {
         <Container maxWidth="xl">
             <Grid container justify="space-between" alignItems="center">
                 <Grid item lg={3} xs={12}>
-                    <Typography variant="h5">Calculator Project</Typography>
+                    <Typography variant="h5">{title + " Project"}</Typography>
                 </Grid>
                 <Breadcrumbs>
                     <MuiLink onClick={() => history.push("/#hero")} style={{ cursor: "pointer" }}>
                         Home
                     </MuiLink>
-                    <Typography>Calculator</Typography>
+                    <Typography>{title}</Typography>
                 </Breadcrumbs>
             </Grid>
         </Container>

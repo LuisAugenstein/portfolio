@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import AOS from 'aos'
 import Home from './home/Home'
 import Calculator from './projects/Calculator'
+import Sphero from './projects/Sphero'
 import Sidebar from './Sidebar';
 
 import 'swiper/swiper-bundle.min.css'
@@ -27,6 +28,7 @@ function App() {
     <Switch>
       <Route path="/" component={Home} exact />
       <Route path="/calculator" component={Calculator} />
+      <Route path="/sphero" component={Sphero} />
     </Switch>
   </main>
   );

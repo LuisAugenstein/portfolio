@@ -4,8 +4,6 @@ import ReactMarkdown from 'react-markdown'
 import React from 'react'
 import Section from '../../Section'
 import ImageSwiper from './ImageSwiper'
-import ProjectCard from './ProjectCard'
-import markdownText from './calculatorMarkdown'
 
 const useStyles = makeStyles(theme => ({
     paper: {
@@ -16,16 +14,16 @@ const useStyles = makeStyles(theme => ({
     }
 }))
 
-function DetailBody(props) {
+function DetailBody({ images, markdownText, children }) {
     const classes = useStyles()
     return <Section>
         <Grid container spacing={3}>
             <Grid item md={8} xs={12}>
-                <ImageSwiper />
+                <ImageSwiper images={images} />
             </Grid>
 
             <Grid item md={4} xs={12} >
-                <ProjectCard />
+                {children}
             </Grid>
 
             <Grid item xs={12} className={classes.paper}>

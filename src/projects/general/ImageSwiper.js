@@ -3,9 +3,7 @@ import React from 'react'
 import SwiperCore, { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import Image1 from "../../img/portfolio/portfolio-details-1.jpg"
-import Image2 from "../../img/portfolio/portfolio-details-2.jpg"
-import Image3 from "../../img/portfolio/portfolio-details-3.jpg"
+
 
 const useStyles = makeStyles(theme => ({
     swiper: {
@@ -31,7 +29,7 @@ const useStyles = makeStyles(theme => ({
 
 SwiperCore.use([Navigation, Pagination]);
 
-function ImageSwiper() {
+function ImageSwiper({ images }) {
     const classes = useStyles()
     return (
         <Swiper
@@ -40,10 +38,11 @@ function ImageSwiper() {
             navigation
             pagination={{ clickable: true }}
         >
-            <SwiperSlide><img src={Image1} alt="" /></SwiperSlide>
-            <SwiperSlide><img src={Image2} alt="" /></SwiperSlide>
-            <SwiperSlide><img src={Image3} alt="" /></SwiperSlide>
-        </Swiper>
+            {images.map(image => {
+                console.log("Hallo")
+                return < SwiperSlide > <img src={image} alt="" /></SwiperSlide>
+            })}
+        </Swiper >
     );
 }
 

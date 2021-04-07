@@ -1,5 +1,6 @@
 import { Button, Box, Card, CardActions, CardContent, Divider, Typography, makeStyles, ListItem, Grid, Link as MuiLink } from '@material-ui/core'
 import React from 'react'
+import { AiFillGithub } from "react-icons/ai";
 
 const useStyles = makeStyles(theme => ({
     card: {
@@ -11,36 +12,41 @@ const useStyles = makeStyles(theme => ({
     }
 }))
 
-function ProjectCard(props) {
+function ProjectCard({ title, idea, goal, tools, githubUrl, btnText, btnUrl }) {
     const classes = useStyles()
     return <Card className={classes.card}>
         <CardContent>
             <Typography align="center" variant="h5">
-                <strong>Calculcator Backend Parser</strong>
+                <strong>{title}</strong>
             </Typography>
             <Divider className={classes.divider} />
         </CardContent>
 
         <ListItem>
             <Typography>
-                <strong>Project Idea</strong>: Implement a recursive descent parser to evaluate string expressions created with a calculator user interface.
+                <strong>Project Idea</strong>: {" " + idea}
             </Typography>
         </ListItem>
 
         <ListItem>
             <Typography>
-                <strong>Learning Goals</strong>: better understand basic parser mechanisms and create a first C++ backend application
+                <strong>Learning Goals</strong>:{" " + goal}
             </Typography>
         </ListItem>
 
         <ListItem>
             <Typography>
-                <strong>Used Tools</strong>: C++ backend, React frontend
+                <strong>Used Tools</strong>:{" " + tools}
             </Typography>
         </ListItem>
         <ListItem>
+
+            <AiFillGithub style={{ fontSize: "25px" }} />
             <Typography>
-                <strong>Project URL</strong>: <MuiLink style={{ cursor: "pointer" }}>www.example.com</MuiLink>
+                {": "}
+                <MuiLink style={{ cursor: "pointer" }} onClick={() => window.open(githubUrl, "_blank")}>
+                    {"Github project"}
+                </MuiLink>
             </Typography>
         </ListItem>
 
@@ -49,9 +55,9 @@ function ProjectCard(props) {
         <CardActions>
             <Grid container justify="center">
                 <Box width="200px">
-                    <Button color="primary" variant="contained" fullWidth >
-                        Live Demo
-                </Button>
+                    <Button color="primary" variant="contained" fullWidth onClick={() => window.open(btnUrl, "_blank")}>
+                        {btnText}
+                    </Button>
                 </Box>
             </Grid>
         </CardActions>

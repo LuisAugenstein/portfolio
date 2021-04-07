@@ -4,7 +4,7 @@ import SingleProject from './SingleProject';
 import Section from '../Section'
 
 import Image1 from "../img/portfolio/portfolio-1.png"
-import Image2 from "../img/portfolio/portfolio-2.jpg"
+import Image2 from "../img/portfolio/portfolio-2.png"
 import Image3 from "../img/portfolio/portfolio-3.jpg"
 import Image4 from "../img/portfolio/portfolio-4.jpg"
 import Image5 from "../img/portfolio/portfolio-5.jpg"
@@ -35,7 +35,7 @@ function Portfolio(props) {
 
     const images = [
         { file: Image1, link: "/calculator" },
-        { file: Image2, link: "/" },
+        { file: Image2, link: "/sphero" },
         { file: Image3, link: "/" },
         { file: Image4, link: "/" },
         { file: Image5, link: "/" },
