@@ -4,6 +4,7 @@ import AOS from 'aos'
 import Home from './home/Home'
 import Calculator from './projects/Calculator'
 import Sphero from './projects/Sphero'
+import BeautifulMaths from './projects/BeautifulMaths'
 import Sidebar from './Sidebar';
 
 import 'swiper/swiper-bundle.min.css'
@@ -29,6 +30,7 @@ function App() {
       <Route path="/" component={Home} exact />
       <Route path="/calculator" component={Calculator} />
       <Route path="/sphero" component={Sphero} />
+      <Route path="/beautiful-maths" component={BeautifulMaths} />
     </Switch>
   </main>
   );
