@@ -7,12 +7,12 @@ import Image1 from "../img/portfolio/BeautifulMaths1.png"
 import ProjectCard from './general/ProjectCard'
 
 const markdownText = `
-# Beautiful Maths - Collection
+# Beautiful Maths - Collection (In Progress)
 ---
 This project is a collection of several visual mini projects. The single project ideas are mainly unrelated. 
 Whenever I stumble across a new algorithm or just something that looks cool I add it to this collection. 
 The main inspirations came from various classes at my university but also from youtuber's like for example 
-The coding train.   
+The coding train. 
 `
 
 function Sphero(props) {
