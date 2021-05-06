@@ -4,8 +4,9 @@ import SingleProject from './SingleProject';
 import Section from '../Section'
 
 import spheroImage from "../img/portfolio/portfolio-1.png"
-import beatuifulMathsImage from "../img/portfolio/portfolio-2.png"
-import carAIImage from "../img/portfolio/portfolio-3.png"
+import asuroImage from "../img/portfolio/portfolio-2.png"
+import beatuifulMathsImage from "../img/portfolio/portfolio-3.png"
+import carAIImage from "../img/portfolio/portfolio-4.png"
 // import Image4 from "../img/portfolio/portfolio-4.jpg"
 // import Image5 from "../img/portfolio/portfolio-5.jpg"
 // import Image6 from "../img/portfolio/portfolio-6.jpg"
@@ -35,6 +36,7 @@ function Portfolio(props) {
 
     const images = [
         { file: spheroImage, link: "/sphero" },
+        { file: asuroImage, link: "/asuro" },
         { file: beatuifulMathsImage, link: "/beautiful-maths" },
         { file: carAIImage, link: "/#portfolio" },
         //{ file: Image4, link: "/" },
