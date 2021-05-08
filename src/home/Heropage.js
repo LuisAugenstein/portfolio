@@ -21,6 +21,7 @@ const useStyles = makeStyles(theme => ({
     },
     text: {
         color: theme.palette.common.white,
+        marginTop: "50px"
     }
 }))
 

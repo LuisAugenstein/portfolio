@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
     }
 }))
 
-function SingleProject({ imgFile, link }) {
+function SingleProject({ imgFile, link, title }) {
     const classes = useStyles()
     return <Grid item md={4} sm={6} xs={12}>
         <Link to={link}>

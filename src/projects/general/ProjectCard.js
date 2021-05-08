@@ -9,6 +9,9 @@ const useStyles = makeStyles(theme => ({
     divider: {
         backgroundColor: theme.palette.grey[600],
         marginTop: "10px"
+    },
+    btn: {
+        color: "white"
     }
 }))
 
@@ -55,7 +58,7 @@ function ProjectCard({ title, idea, goal, tools, githubUrl, btnText, btnUrl }) {
         <CardActions>
             <Grid container justify="center">
                 <Box width="200px">
-                    <Button color="primary" variant="contained" fullWidth onClick={() => window.open(btnUrl, "_blank")}>
+                    <Button color="primary" className={classes.btn} variant="contained" fullWidth onClick={() => window.open(btnUrl, "_blank")}>
                         {btnText}
                     </Button>
                 </Box>

@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import { blue } from '@material-ui/core/colors';
+import { green } from '@material-ui/core/colors';
 import './style.css';
 
 const theme = createMuiTheme({
   palette: {
-    primary: blue,
+    primary: green,
   },
   typography: {
     fontFamily: "'Open Sans', sans-serif"

@@ -35,7 +35,7 @@ function Portfolio(props) {
 
 
     const images = [
-        { file: spheroImage, link: "/sphero" },
+        { file: spheroImage, link: "/sphero", title: "Sphero Mini - Controller" },
         { file: asuroImage, link: "/asuro" },
         { file: beatuifulMathsImage, link: "/beautiful-maths" },
         { file: carAIImage, link: "/#portfolio" },
@@ -52,7 +52,7 @@ function Portfolio(props) {
             Portfolio
         </Typography>
         <Grid container spacing={4} data-aos="fade-up" data-aos-delay="100">
-            {images.map((img, idx) => <SingleProject imgFile={img.file} link={img.link} key={idx} />)}
+            {images.map((img, idx) => <SingleProject imgFile={img.file} link={img.link} title={img.title} key={idx} />)}
         </Grid>
     </Section>
 }

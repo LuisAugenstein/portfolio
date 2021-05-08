@@ -12,13 +12,14 @@ const markdownText = `
 ---
 This project was created during the class "Mobile Computing und Internet der Dinge" at the KIT. 
 The task was to create an android app that makes use of the esense earables. 
-The earables are basically Bluetooth earbuds with additional accelerometer and gyroscope sensors. 
-My idea was to use the earables as a funny way to control the Sphero Mini robot ball. 
+The earables are Bluetooth earbuds with additional accelerometer and gyroscope sensors. 
+My idea was to use the earables as a fun way to control the Sphero Mini robot ball. 
 Originally the Sphero Mini is meant as a toy to help kids learn to program. 
 So I thought it should be quite easy to connect to the Sphero Mini with an own app. 
 Unfortunately, there was no documentation about the Bluetooth Low Energy interface. 
 After struggling many hours, I found a GitHub repository where somebody figured out the byte sequences to start and control the Sphero Mini. 
-With that information, I managed to implement the app and successfully connected to the Sphero. Watch the demonstration video to see the Sphero Mini in action.
+With that information, I managed to implement the app and successfully connected to the Sphero. 
+Watch the demonstration video to see the Sphero Mini in action.
 `
 
 function Sphero(props) {

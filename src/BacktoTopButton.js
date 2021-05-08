@@ -20,7 +20,8 @@ function BacktoTopButton({ isSidebarOpen, setSidebarOpen }) {
             bottom: theme.spacing(2),
             right: theme.spacing(2),
             visibility: isSidebarOpen ? visibilityStr : "hidden",
-            zIndex: "1"
+            zIndex: "1",
+            color: "white"
         }
     }))
 

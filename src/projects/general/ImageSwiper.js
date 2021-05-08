@@ -10,6 +10,9 @@ const useStyles = makeStyles(theme => ({
         '& img, .swiper-slide-active': {
             width: "100% !important"
         },
+        '& .swiper-button-prev, .swiper-button-next': {
+            color: theme.palette.primary.main
+        },
         '& .swiper-pagination': {
             marginTop: "20px",
             position: "relative",
