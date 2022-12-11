@@ -1,3 +1,3 @@
-This project contains a gallery of my other projects.  
-It is hosted on: https://portfolio-luis-augenstein.netlify.app
-
+# Portfolio 
+A project containing information of my other projects.  
+Try it: https://portfolio-luis-augenstein.netlify.app
