@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Asuro(): JSX.Element {
-  return <></>;
+  return <>Asuro</>;
 }
 
 export default Asuro;

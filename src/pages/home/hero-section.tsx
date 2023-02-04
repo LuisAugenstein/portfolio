@@ -1,7 +1,7 @@
 import React from 'react';
 
 function HeroSection(): JSX.Element {
-  return <></>;
+  return <>Hero Image</>;
 }
 
 export default HeroSection;

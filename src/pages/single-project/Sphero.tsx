@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Sphero() {
-  return <></>;
+  return <>Sphero</>;
 }
 
 export default Sphero;
