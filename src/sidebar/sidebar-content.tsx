@@ -40,17 +40,6 @@ function SidebarContent(props: SidebarContentProps): JSX.Element {
       <Avatar alt="avatar" src={avatarImg} sx={{ width: '120px', height: '120px' }} />
     </Box>
   );
-  const name = (
-    <ListItem>
-      <ListItemText
-        primary={
-          <Typography variant="h5" style={{ color: 'white' }} textAlign='center'>
-            Luis Augenstein
-          </Typography>
-        }
-      />
-    </ListItem>
-  );
 
   const menuList = (
     <MenuList>
@@ -76,7 +65,6 @@ function SidebarContent(props: SidebarContentProps): JSX.Element {
   return (
     <Stack>
       {avatar}
-      {name}
       {menuList}
     </Stack>
   );

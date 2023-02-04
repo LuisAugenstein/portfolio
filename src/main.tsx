@@ -9,7 +9,7 @@ const theme = createTheme({
   palette: {
     mode: 'dark',
     primary: green
-  },
+  }
 });
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
