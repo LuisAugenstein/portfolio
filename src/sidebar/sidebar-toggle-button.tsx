@@ -11,7 +11,7 @@ export type SidebarToggleButtonProps = {
 function SidebarToggleButton(props: SidebarToggleButtonProps): JSX.Element {
   return (
     <Hidden lgUp>
-      <Box m={1} position={'absolute'} right={0}>
+      <Box m={1} position={'fixed'} right={0}>
         <Fab
           size="medium"
           color="primary"
