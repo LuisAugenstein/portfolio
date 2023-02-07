@@ -1,15 +1,15 @@
 import React from 'react';
-import { createBrowserRouter, Outlet } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 import Home from './pages/home/home';
-import Sphero from './pages/single-project/Sphero';
-import Asuro from './pages/single-project/Asuro';
+import Sphero from './pages/single-project/sphero';
+import Asuro from './pages/single-project/asuro';
 import HskTrainer from './pages/single-project/hsk-trainer';
-import App from './app';
+import Navigation from './navigation/navigation';
 
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: <Navigation />,
     children: [
       { path: '/', element: <Home /> },
       { path: '/sphero', element: <Sphero /> },
