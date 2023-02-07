@@ -27,6 +27,7 @@ function Navigation(): JSX.Element {
   return (
     <>
       <Button
+        color="success"
         title="Toggle Sidebar"
         className="fixed right-0 z-10 m-5 rounded-full lg:hidden [&>span]:p-2"
         onClick={() => setSidebarOpen(!isSidebarOpen)}
@@ -43,7 +44,7 @@ function Navigation(): JSX.Element {
       ></div>
 
       <Sidebar
-        className={`' absolute z-20 h-screen w-[var(--sidebar-width)] transition duration-200 [&>div]:rounded-none [&>div]:bg-gray-50 ${
+        className={`' [&>div]:bg-primary absolute z-20 h-screen w-[var(--sidebar-width)] transition duration-200 [&>div]:rounded-none ${
           isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >

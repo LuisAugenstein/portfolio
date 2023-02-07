@@ -24,36 +24,6 @@ function SingleProject(props: SingleProjectProps): JSX.Element {
         </span>
       </div>
     </Link>
-    // <Link to={project.path}>
-    //   <Card
-    //     sx={{
-    //       position: 'relative',
-    //       height: '100%',
-    //       '&:hover': {
-    //         div: {
-    //           bottom: '0',
-    //         },
-    //       },
-    //     }}
-    //   >
-    //     <img width="100%" height="100%" src={project.image} alt={project.title} />
-    //     <Box
-    //       sx={(theme) => ({
-    //         width: '100%',
-    //         height: '42px',
-    //         bottom: '-42px',
-    //         position: 'absolute',
-    //         transition: 'all ease-in-out 0.3s',
-    //         display: 'flex',
-    //         justifyContent: 'center',
-    //         alignItems: 'center',
-    //         background: alpha(theme.palette.primary.main, 0.75),
-    //       })}
-    //     >
-    //       <AddIcon />
-    //     </Box>
-    //   </Card>
-    // </Link>
   );
 }
 
