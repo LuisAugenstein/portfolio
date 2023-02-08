@@ -15,7 +15,6 @@ function ProjectCard(props: ProjectCardProps): JSX.Element {
   return (
     <div className="prose prose-sm max-w-sm dark:prose-invert">
       <Card className="[&>div>p]:m-0 [&>div>p]:leading-5">
-        <h5 className="text-2xl font-bold tracking-tight">Technical Details</h5>
         <p>
           <b>Main Idea: </b>
           {props.idea}

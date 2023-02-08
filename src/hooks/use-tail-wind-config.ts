@@ -1,7 +1,13 @@
 import { useMemo } from 'react';
-import resolveConfig from 'tailwindcss/resolveConfig';
-import { Config } from 'tailwindcss/types/config';
-import tailwindConfig from 'tailwind-config';
+
+// TODO: Find out how to dynamically load tailwindConfig
+const tailwindScreens = {
+  sm: '640px',
+  md: '768px',
+  lg: '1024px',
+  xl: '1280px',
+  '2xl': '1536px',
+};
 
 export type ScreenConfig = {
   sm: number;
@@ -11,17 +17,11 @@ export type ScreenConfig = {
   '2xl': number;
 };
 
-export function useTailWindConfig(): Config {
-  return useMemo(() => resolveConfig(tailwindConfig), []);
-}
-
 export function useTailWindScreenConfig(): ScreenConfig {
   return useMemo(() => {
-    const config = resolveConfig(tailwindConfig);
-    const screens = config.theme?.screens as { [key: string]: string };
     let screenConfig = {} as { [key: string]: number };
-    for (const key of Object.keys(screens)) {
-      screenConfig[key] = parseInt(screens[key].replace('px', ''));
+    for (const key of Object.keys(tailwindScreens)) {
+      screenConfig[key] = parseInt(tailwindScreens[key as keyof ScreenConfig].replace('px', ''));
     }
     return screenConfig as ScreenConfig;
   }, []);
