@@ -1,8 +1,11 @@
 import React from 'react';
 import PageScaffold from './generic/page-scaffold';
-import ProjectCard from './generic/ProjectCard';
+import ProjectCard, { TechStackItem } from './generic/ProjectCard';
 
-import Image1 from '../../assets/projects/asuro/asuro-1.png';
+import Image1 from '../../assets/projects/asuro/carousel-images/asuro-1.png';
+
+import cIcon from '../../assets/projects/asuro/card-icons/c-programming-language.svg';
+import asuroIcon from '../../assets/projects/asuro/card-icons/asuro.png';
 
 const markdownText = `
 This project was created during the class "Basispraktikum: Mobile Roboter" at the KIT within two weeks. 
@@ -14,7 +17,11 @@ Asuro was equipped with two light sensors, six touch sensors, and visual wheel e
 `;
 
 const images = [Image1];
-const techStack = "C, Asuro-library";
+const techStack: TechStackItem[] = [
+  {icon: cIcon, name: "C Programming Language", url: "" },
+  {icon: asuroIcon, name: "Asuro", url: "http://www.asurowiki.de/pmwiki/pub/html/main.html"}
+];
+  "C, Asuro-library";
 
 function Asuro(): JSX.Element {
   return (
@@ -22,7 +29,7 @@ function Asuro(): JSX.Element {
       <ProjectCard
         idea="enable the Asuro to beat the parkour"
         goal="learn about low level microcontroller porgramming"
-        techStack={[]}
+        techStack={techStack}
         githubUrl="https://github.com/LuisAugenstein/Asuro-LineFollower"
         btnText="Demonstration Video"
         btnUrl="https://www.youtube.com/watch?v=6IGgH8EBQsc&t=11s"
