@@ -2,10 +2,16 @@ import React from 'react';
 import { Button, Card } from 'flowbite-react';
 import { Link } from 'react-router-dom';
 
+export type TechStackItem = {
+  icon: string;
+  name: string;
+  url: string;
+};
+
 export type ProjectCardProps = {
   idea: string;
   goal: string;
-  tools: string;
+  techStack: TechStackItem[];
   githubUrl: string;
   btnText: string;
   btnUrl: string;
@@ -23,12 +29,21 @@ function ProjectCard(props: ProjectCardProps): JSX.Element {
           <b>Learning Goals: </b>
           {props.goal}
         </p>
-        <p>
+        <p className="flex items-center gap-1 flex-wrap">
           <b>Tech Stack: </b>
-          {props.tools}
+          {props.techStack.map(({ name, icon, url }, index) => (
+            <button
+              key={index}
+              title={name}
+              onClick={() => window.open(url)}
+              className="rounded border border-transparent py-1 px-[2px] hover:border-gray-500"
+            >
+              <img className='w-6 h-6 m-0' src={icon} />
+            </button>
+          ))}
         </p>
         <p
-          className="group flex cursor-pointer items-center"
+          className="group flex cursor-pointer items-center max-w-fit"
           onClick={() => window.open(props.githubUrl)}
         >
           <svg

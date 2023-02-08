@@ -14,6 +14,7 @@ Asuro was equipped with two light sensors, six touch sensors, and visual wheel e
 `;
 
 const images = [Image1];
+const techStack = "C, Asuro-library";
 
 function Asuro(): JSX.Element {
   return (
@@ -21,7 +22,7 @@ function Asuro(): JSX.Element {
       <ProjectCard
         idea="enable the Asuro to beat the parkour"
         goal="learn about low level microcontroller porgramming"
-        tools="C, Asuro-library"
+        techStack={[]}
         githubUrl="https://github.com/LuisAugenstein/Asuro-LineFollower"
         btnText="Demonstration Video"
         btnUrl="https://www.youtube.com/watch?v=6IGgH8EBQsc&t=11s"
