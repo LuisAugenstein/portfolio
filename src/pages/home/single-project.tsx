@@ -17,6 +17,7 @@ function SingleProject(props: SingleProjectProps): JSX.Element {
   return (
     <Link to={path}>
       <div className="group relative h-full cursor-pointer overflow-hidden">
+        <span className='absolute text-gray-500 font-serif text-2xl sm:text-4xl  max-w-[300px] p-1 pl-2'>{title}</span>
         <img className="rounded" src={image} alt={title} />
         <div className="absolute top-0 h-full w-full group-hover:bg-black/10"></div>
         <span className="absolute flex h-8 w-full items-center  justify-center rounded-b bg-primary-500/50 transition group-hover:-translate-y-full">
