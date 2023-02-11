@@ -8,7 +8,7 @@ export function useScrollHandler(): void {
     if (location.hash) {
       const element = document.getElementById(location.hash.slice(1));
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        setTimeout(() => element.scrollIntoView({ behavior: 'smooth', block: 'end' }), 100);
       }
     } else {
       window.scrollTo({ top: 0, behavior: 'smooth' });
