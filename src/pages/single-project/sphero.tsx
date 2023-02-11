@@ -2,13 +2,13 @@ import React from 'react';
 import PageScaffold from './generic/page-scaffold';
 import ProjectCard, { TechStackItem } from './generic/ProjectCard';
 
-import Image1 from '../../assets/projects/sphero/carousel-images/sphero-1.jpg';
-import Image2 from '../../assets/projects/sphero/carousel-images/sphero-2.png';
+import Image1 from '../../assets/projects/sphero/sphero-1.jpg';
+import Image2 from '../../assets/projects/sphero/sphero-2.png';
 
-import flutterIcon from '../../assets/projects/sphero/card-icons/flutter.svg';
-import flutterBlueIcon from '../../assets/projects/sphero/card-icons/flutter-blue.svg';
-import spheroIcon from '../../assets/projects/sphero/card-icons/sphero.svg';
-import esenseEarableIcon from '../../assets/projects/sphero/card-icons/esense-earable.png';
+import flutterIcon from '../../assets/tech-stack-icons/flutter.svg';
+import flutterBlueIcon from '../../assets/tech-stack-icons/flutter-blue.svg';
+import spheroIcon from '../../assets/tech-stack-icons/sphero.svg';
+import esenseEarableIcon from '../../assets/tech-stack-icons/esense-earable.png';
 
 const markdownText = `
 This project was created during the class "Mobile Computing und Internet der Dinge" at the KIT. 

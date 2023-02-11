@@ -2,10 +2,10 @@ import React from 'react';
 import PageScaffold from './generic/page-scaffold';
 import ProjectCard, { TechStackItem } from './generic/ProjectCard';
 
-import Image1 from '../../assets/projects/asuro/carousel-images/asuro-1.png';
+import Image1 from '../../assets/projects/asuro/asuro.png';
 
-import cIcon from '../../assets/projects/asuro/card-icons/c-programming-language.svg';
-import asuroIcon from '../../assets/projects/asuro/card-icons/asuro.png';
+import cIcon from '../../assets/tech-stack-icons/c-programming-language.svg';
+import asuroIcon from '../../assets/tech-stack-icons/asuro.png';
 
 const markdownText = `
 This project was created during the class "Basispraktikum: Mobile Roboter" at the KIT within two weeks. 

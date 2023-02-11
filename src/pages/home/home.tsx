@@ -2,12 +2,13 @@ import React from 'react';
 import SingleProject, { ProjectData } from './single-project';
 import spheroImage from '../../assets/home/project-sphero.png';
 import asuroImage from '../../assets/home/project-asuro.png';
+import hskTrainerImage from '../../assets/home/project-hsk-trainer.png';
 
 function Home(): JSX.Element {
   const projects: ProjectData[] = [
     { image: spheroImage, path: '/sphero', title: 'Sphero Mini - Controller' },
     { image: asuroImage, path: '/asuro', title: 'Asuro - LineFollower' },
-    // { image: hskTrainerImage, path: '/hsk-trainer', title: 'HSK - Trainer' },
+    { image: hskTrainerImage, path: '/hsk-trainer', title: 'HSK - Vocabulary Trainer' },
   ];
 
   return (
@@ -22,7 +23,7 @@ function Home(): JSX.Element {
         </span>
       </div>
 
-      <div id="portfolio" className="bg-secondary w-full p-16 pt-12">
+      <div id="portfolio" className="bg-secondary w-full p-4 sm:p-16 pt-12">
         <header className="prose dark:prose-invert">
           <h1 className="mb-6 font-thin md:text-5xl ">Portfolio</h1>
           <div className="h-[2px] w-14 bg-primary-500/70"></div>
