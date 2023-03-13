@@ -31,7 +31,7 @@ function ProjectCard(props: ProjectCardProps): JSX.Element {
         <p className="flex flex-wrap items-center gap-1">
           <b>Tech Stack: </b>
           {props.techStack.map(({ name, icon, url }, index) => (
-            <div
+            <span
               key={index}
               title={name}
               onClick={() => url && window.open(url)}
@@ -41,7 +41,7 @@ function ProjectCard(props: ProjectCardProps): JSX.Element {
               }
             >
               <img className="m-0 h-6 w-6" src={icon} />
-            </div>
+            </span>
           ))}
         </p>
         <p
