@@ -18,7 +18,7 @@ Asuro was equipped with two light sensors, six touch sensors, and visual wheel e
 
 const images = [Image1];
 const techStack: TechStackItem[] = [
-  {icon: cIcon, name: "C Programming Language", url: "" },
+  {icon: cIcon, name: "C Programming Language" },
   {icon: asuroIcon, name: "Asuro", url: "http://www.asurowiki.de/pmwiki/pub/html/main.html"}
 ];
   "C, Asuro-library";

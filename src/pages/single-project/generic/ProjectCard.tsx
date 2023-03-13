@@ -1,11 +1,10 @@
 import React from 'react';
 import { Button, Card } from 'flowbite-react';
-import { Link } from 'react-router-dom';
 
 export type TechStackItem = {
   icon: string;
   name: string;
-  url: string;
+  url?: string;
 };
 
 export type ProjectCardProps = {
@@ -29,21 +28,24 @@ function ProjectCard(props: ProjectCardProps): JSX.Element {
           <b>Learning Goals: </b>
           {props.goal}
         </p>
-        <p className="flex items-center gap-1 flex-wrap">
+        <p className="flex flex-wrap items-center gap-1">
           <b>Tech Stack: </b>
           {props.techStack.map(({ name, icon, url }, index) => (
-            <button
+            <div
               key={index}
               title={name}
-              onClick={() => window.open(url)}
-              className="rounded border border-transparent py-1 px-[2px] hover:border-gray-500"
+              onClick={() => url && window.open(url)}
+              className={
+                'rounded border border-transparent py-1 px-[2px] ' +
+                (url && 'cursor-pointer hover:border-gray-500')
+              }
             >
-              <img className='w-6 h-6 m-0' src={icon} />
-            </button>
+              <img className="m-0 h-6 w-6" src={icon} />
+            </div>
           ))}
         </p>
         <p
-          className="group flex cursor-pointer items-center max-w-fit"
+          className="group flex max-w-fit cursor-pointer items-center"
           onClick={() => window.open(props.githubUrl)}
         >
           <svg
@@ -67,22 +69,6 @@ function ProjectCard(props: ProjectCardProps): JSX.Element {
         </div>
       </Card>
     </div>
-
-    //   <CardActions>
-    //     <Grid container justifyContent="center">
-    //       <Box width="200px">
-    //         <Button
-    //           color="primary"
-    //           variant="contained"
-    //           fullWidth
-    //           onClick={() => window.open(props.btnUrl, '_blank')}
-    //         >
-    //           {props.btnText}
-    //         </Button>
-    //       </Box>
-    //     </Grid>
-    //   </CardActions>
-    // </Card>
   );
 }
 
