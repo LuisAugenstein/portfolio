@@ -10,8 +10,8 @@ import microsoftIcon from '../../assets/tech-stack-icons/microsoft.svg';
 const markdownText = `
 I created this project while preparing for the HSK-2 Chinese Test. 
 For the first language level (HSK-1) there already are numerous free online sources available. 
-However, those sources only provide free access to 300 words. 
-If one wants to go further and pass the HSK-2 test, 600 words are needed, which are not free anymore. 
+However, those sources only provide free access to 150 words. 
+If one wants to go further and pass the HSK-2 test, 300 words are needed, which are not free anymore. 
 For that reason, I created my own Chinese vocabulary trainer application.
 I found free JSON files containing all 5000 words needed to pass all HSK-test up to the 6th level and built 
 a simple vocabulary question app using flutter. When I finished the application, 
