@@ -41,7 +41,7 @@ function HSKVocabularyTrainer(): JSX.Element {
         techStack={techStack}
         githubUrl="https://github.com/LuisAugenstein/hsk_vocabulary_trainer"
         btnText="Live Demo"
-        btnUrl="https://www.youtube.com/watch?v=lFdZw2JB-hE"
+        btnUrl="https://hsk-vocabulary-trainer.netlify.app"
       />
     </PageScaffold>
   );
