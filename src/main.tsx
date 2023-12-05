@@ -8,7 +8,7 @@ import { Flowbite } from 'flowbite-react';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <Flowbite theme={{ dark: true }}>
+    <Flowbite theme={{ mode: 'dark'}}>
       <RouterProvider router={router} />
     </Flowbite>
   </React.StrictMode>
