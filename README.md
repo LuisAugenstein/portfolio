@@ -1,6 +1,6 @@
 # Portfolio 
-A project containing information of my other projects.  
-Try it: https://portfolio-luis-augenstein.netlify.app
+A project containing information about my other projects.  
+have a look at: https://portfolio-luis-augenstein.netlify.app
 
 # Installation
 On Ubuntu
